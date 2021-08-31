@@ -50,3 +50,24 @@ li {
 .weather-temperature .units a:hover {
   text-decoration: underline;
 }
+@media (max-width: 576px) {
+  .weather-temperature strong {
+    font-size: 44px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 576px) {
+  .weather-temperature .units {
+    position: relative;
+    font-size: 12px;
+    top: -24px;
+    margin-left: 4px;
+  }
+}
+@media (max-width: 576px) {
+  .Weather .weather-temperature img {
+    margin-right: 5px;
+    height: 44px;
+    width: 44px;
+  }
+}

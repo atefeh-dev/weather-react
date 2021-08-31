@@ -14,7 +14,7 @@ const Search = () => {
           />
         </div>
         <div class="col-3">
-          <input type="submit" class="btn btn-primary w-100" value="Search" />
+          <input type="submit" class="btn btn-primary w-100 " value="Search" />
         </div>
       </div>
     </form>
