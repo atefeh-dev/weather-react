@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import weatherApi from "../Apis/weatherApi";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 
 import "../Style/Search.css";
 import WeatherInfo from "./WeatherInfo";
@@ -17,7 +19,6 @@ const Search = () => {
       })
       .then((res) => {
         handleResponse(res.data);
-        console.log(res.data);
       });
   };
   const handleResponse = (response) => {
@@ -35,32 +36,47 @@ const Search = () => {
   };
   const onFormSubmit = (e) => {
     e.preventDefault();
+
     searchWeather();
   };
-  return (
-    <div>
-      <form className="mb-3" onSubmit={onFormSubmit}>
-        <div className="row">
-          <div className="col-9">
-            <input
-              type="search"
-              className="form-control"
-              placeholder="type a city ..."
-              autoFocus="on"
-              onChange={(e) => setTerm(e.target.value)}
-            />
+  if (weatherData.ready) {
+    return (
+      <div>
+        <form className="mb-3" onSubmit={onFormSubmit}>
+          <div className="row">
+            <div className="col-9">
+              <input
+                type="search"
+                className="form-control"
+                placeholder="type a city ..."
+                autoFocus="on"
+                onChange={(e) => setTerm(e.target.value) && e.preventDefault()}
+              />
+            </div>
+            <div className="col-3">
+              <input
+                type="submit"
+                className="btn btn-primary w-100 "
+                value="Search"
+              />
+            </div>
           </div>
-          <div className="col-3">
-            <input
-              type="submit"
-              className="btn btn-primary w-100 "
-              value="Search"
-            />
-          </div>
-        </div>
-      </form>
-      <WeatherInfo />
-    </div>
-  );
+        </form>
+        <WeatherInfo data={weatherData} />
+      </div>
+    );
+  } else {
+    searchWeather();
+    return (
+      <Loader
+        type="Puff"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={3000} //3 secs
+      />
+    );
+  }
 };
+
 export default Search;

@@ -2,7 +2,8 @@
 
 import React from "react";
 import "../Style/WeatherInfo.css";
-const WeatherInfo = () => {
+const WeatherInfo = ({ data }) => {
+  console.log(data);
   return (
     <div className="overview">
       <h1> NewYork</h1>
