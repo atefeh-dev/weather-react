@@ -3,16 +3,16 @@
 import "./Style/App.css";
 import React from "react";
 import Search from "./components/Search";
-import Overview from "./components/Overview";
 import Footer from "./components/Footer";
+import "bootstrap/dist/css/bootstrap.css";
+
 const App = () => {
   return (
     <div>
-      <div className="container border mt-5">
+      <div className="container-fluid border mt-5">
         <Search />
-        <Overview />
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

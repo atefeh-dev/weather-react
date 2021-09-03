@@ -1,11 +1,11 @@
 /** @format */
 
 import React from "react";
-import "../Style/Overview.css";
-const Overview = () => {
+import "../Style/WeatherInfo.css";
+const WeatherInfo = () => {
   return (
     <div className="overview">
-      <h1> New York</h1>
+      <h1> NewYork</h1>
       <ul>
         <li>Last updated: Tuesday 10:00</li>
         <li>Cloudy</li>
@@ -35,4 +35,4 @@ const Overview = () => {
     </div>
   );
 };
-export default Overview;
+export default WeatherInfo;

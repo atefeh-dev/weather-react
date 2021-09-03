@@ -13,12 +13,12 @@ h1 {
   margin-bottom: 0;
 }
 UL {
-  margin: 0;
+  margin: -30px;
   padding: 0;
 }
 li {
   list-style: none;
-  margin: 0px;
+  margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: 100;
@@ -52,7 +52,7 @@ li {
 }
 @media (max-width: 576px) {
   .weather-temperature strong {
-    font-size: 44px;
+    font-size: 31px;
     font-weight: 400;
   }
 }
@@ -60,14 +60,14 @@ li {
   .weather-temperature .units {
     position: relative;
     font-size: 12px;
-    top: -24px;
+    top: -14px;
     margin-left: 4px;
   }
 }
 @media (max-width: 576px) {
   .Weather .weather-temperature img {
     margin-right: 5px;
-    height: 44px;
-    width: 44px;
+    height: 34px;
+    width: 34px;
   }
 }
