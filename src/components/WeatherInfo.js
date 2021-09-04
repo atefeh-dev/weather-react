@@ -1,15 +1,17 @@
 /** @format */
 
-import React from "react";
+import React, { useEffect } from "react";
+
 import "../Style/WeatherInfo.css";
+
 const WeatherInfo = ({ data }) => {
   console.log(data);
   return (
     <div className="overview">
-      <h1> NewYork</h1>
+      <h1>{data.city}</h1>
       <ul>
         <li>Last updated: Tuesday 10:00</li>
-        <li>Cloudy</li>
+        <li>{data.description}</li>
       </ul>
       <div className="row mt-5">
         <div className="col-6">
@@ -20,7 +22,7 @@ const WeatherInfo = ({ data }) => {
               width="75"
               className="float-left"
             />
-            <strong>19</strong>
+            <strong>{Math.round(data.temperature)}</strong>
             <span className="units ml-1">
               <a href="/">°C</a> | <a href="/">°F</a>
             </span>
@@ -28,8 +30,8 @@ const WeatherInfo = ({ data }) => {
         </div>
         <div className="col-6">
           <ul>
-            <li>Humidity: 40</li>
-            <li>Wind: 10 km/h</li>
+            <li> Humidity: {data.humidity}</li>
+            <li>Wind: {data.wind}</li>
           </ul>
         </div>
       </div>

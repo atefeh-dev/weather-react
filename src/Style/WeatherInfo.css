@@ -12,7 +12,7 @@ h1 {
   line-height: 28px;
   margin-bottom: 0;
 }
-UL {
+ul {
   margin: -30px;
   padding: 0;
 }
@@ -24,6 +24,14 @@ li {
   font-weight: 100;
   line-height: 19px;
 }
+.col-6 ul {
+  margin-top: 13px;
+  margin-left: 5px;
+}
+.col-6 li {
+  line-height: 21px;
+}
+
 .Weather .weather-temperature img {
   margin-right: 5px;
   height: 64px;

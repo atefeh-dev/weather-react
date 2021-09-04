@@ -7,9 +7,11 @@ import Loader from "react-loader-spinner";
 
 import "../Style/Search.css";
 import WeatherInfo from "./WeatherInfo";
+
 const Search = () => {
   const [term, setTerm] = useState("paris");
   const [weatherData, setWeatherData] = useState({ ready: false });
+
   const searchWeather = () => {
     weatherApi
       .get("/weather", {
@@ -21,7 +23,9 @@ const Search = () => {
         handleResponse(res.data);
       });
   };
+
   const handleResponse = (response) => {
+    console.log(response);
     setWeatherData({
       ready: true,
       coordinates: response.coord,
@@ -34,11 +38,12 @@ const Search = () => {
       city: response.name,
     });
   };
+
   const onFormSubmit = (e) => {
     e.preventDefault();
-
     searchWeather();
   };
+
   if (weatherData.ready) {
     return (
       <div>
