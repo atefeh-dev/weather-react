@@ -32,24 +32,22 @@ li {
   line-height: 21px;
 }
 
-.Weather .weather-temperature img {
-  margin-right: 5px;
-  height: 64px;
-  width: 64px;
+.Weather .weather-temperature canvas {
+  margin: 10px auto;
 }
 .float-left {
   float: left;
 }
 .weather-temperature strong {
   color: rgb(33, 33, 33);
-  font-size: 64px;
+  font-size: 44px;
   line-height: 1;
   font-weight: 400;
 }
 .weather-temperature .units {
   position: relative;
   font-size: 16px;
-  top: -34px;
+  top: -24px;
   margin-left: 4px;
 }
 .weather-temperature .units a {
@@ -60,7 +58,7 @@ li {
 }
 @media (max-width: 576px) {
   .weather-temperature strong {
-    font-size: 31px;
+    font-size: 25px;
     font-weight: 400;
   }
 }
@@ -68,12 +66,12 @@ li {
   .weather-temperature .units {
     position: relative;
     font-size: 12px;
-    top: -14px;
+    top: -10px;
     margin-left: 4px;
   }
 }
 @media (max-width: 576px) {
-  .Weather .weather-temperature img {
+  .Weather .weather-temperature canvas {
     margin-right: 5px;
     height: 34px;
     width: 34px;

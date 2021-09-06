@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import weatherApi from "../Apis/weatherApi";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
@@ -12,8 +12,20 @@ const Search = () => {
   const [term, setTerm] = useState("paris");
   const [weatherData, setWeatherData] = useState({ ready: false });
 
-  const searchWeather = () => {
-    weatherApi
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      if (term) {
+        searchWeather();
+      }
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [term]);
+
+  const searchWeather = async () => {
+    await weatherApi
       .get("/weather", {
         params: {
           q: term,
@@ -25,7 +37,6 @@ const Search = () => {
   };
 
   const handleResponse = (response) => {
-    console.log(response);
     setWeatherData({
       ready: true,
       coordinates: response.coord,
