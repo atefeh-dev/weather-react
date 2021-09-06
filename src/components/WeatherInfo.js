@@ -2,7 +2,8 @@
 
 import React, { useEffect } from "react";
 import WeatherIcon from "./WeatherIcon";
-
+import WeatherTemperature from "./WeatherTemperature";
+import FormattedDate from "./FormattedDate";
 import "../Style/WeatherInfo.css";
 
 const WeatherInfo = ({ data }) => {
@@ -17,20 +18,22 @@ const WeatherInfo = ({ data }) => {
     <div className="overview">
       <h1>{data.city}</h1>
       <ul>
-        <li>Last updated: Tuesday 10:00</li>
+        <li>
+          {" "}
+          <FormattedDate date={data.date} />
+        </li>
         <li>{data.description}</li>
       </ul>
       <div className="row mt-5">
         <div className="col-6">
           <div className="weather-temperature">
             <div className="float-left">
-              <WeatherIcon code={data.icon} size={52} />
+              <WeatherIcon code={data.icon} size={48} />
             </div>
 
-            <strong>{Math.round(data.temperature)}</strong>
-            <span className="units ml-1">
-              <a href="/">°C</a> | <a href="/">°F</a>
-            </span>
+            <div className="float-left">
+              <WeatherTemperature celsius={data.temperature} />
+            </div>
           </div>
         </div>
         <div className="col-6">

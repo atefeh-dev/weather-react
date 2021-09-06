@@ -22,14 +22,14 @@ li {
   padding: 0;
   font-size: 16px;
   font-weight: 100;
-  line-height: 19px;
+  line-height: 22px;
 }
 .col-6 ul {
-  margin-top: 13px;
+  margin-top: 1px;
   margin-left: 5px;
 }
 .col-6 li {
-  line-height: 21px;
+  line-height: 22px;
 }
 
 .Weather .weather-temperature canvas {
@@ -43,6 +43,7 @@ li {
   font-size: 44px;
   line-height: 1;
   font-weight: 400;
+  margin-left: 15px;
 }
 .weather-temperature .units {
   position: relative;
