@@ -34,7 +34,7 @@ const WeatherTemperature = ({ temp }) => {
     default:
       return (
         <div>
-          <strong>{Math.round(Fahrenheit(temperature))}</strong>
+          <strong>{Math.round(temperature)}</strong>
           <span className="units ml-1">
             <a href="/" onClick={celsiusOnClickHandle}>
               °C
