@@ -32,7 +32,7 @@ const WeatherInfo = ({ data }) => {
             </div>
 
             <div className="float-left">
-              <WeatherTemperature celsius={data.temperature} />
+              <WeatherTemperature temp={data.temperature} />
             </div>
           </div>
         </div>

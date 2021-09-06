@@ -13,7 +13,7 @@
 }
 @media (max-width: 576px) {
   .container-fluid {
-    max-width: 390px;
+    max-width: 400px;
     padding: 15px;
     margin-left: 5px;
     margin-right: 5px;

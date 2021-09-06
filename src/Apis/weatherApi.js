@@ -8,6 +8,6 @@ export default axios.create({
   baseURL,
   params: {
     appid: apiKey,
-    units: "mertric",
+    units: "metric",
   },
 });
