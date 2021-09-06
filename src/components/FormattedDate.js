@@ -24,7 +24,7 @@ const FormattedDate = ({ date }) => {
   }
   return (
     <div>
-     Last Updated: {day} {hours}:{minutes}
+      Last Updated: {day} {hours}:{minutes}
     </div>
   );
 };
