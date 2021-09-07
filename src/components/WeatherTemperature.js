@@ -31,7 +31,7 @@ const WeatherTemperature = ({ temp }) => {
           </span>
         </div>
       );
-    default:
+    case "Fahrenheit":
       return (
         <div>
           <strong>{Math.round(temperature)}</strong>
@@ -43,6 +43,8 @@ const WeatherTemperature = ({ temp }) => {
           </span>
         </div>
       );
+    default:
+      return <div>oooops fuck </div>;
   }
 };
 

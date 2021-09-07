@@ -1,19 +1,12 @@
 /** @format */
 
-import React, { useEffect } from "react";
+import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 import FormattedDate from "./FormattedDate";
 import "../Style/WeatherInfo.css";
 
 const WeatherInfo = ({ data }) => {
-  useEffect(() => {
-    console.log("This will run after 1 second!");
-    return () => {
-      console.log("i'm  clear");
-    };
-  });
-
   return (
     <div className="overview">
       <h1>{data.city}</h1>
@@ -27,12 +20,16 @@ const WeatherInfo = ({ data }) => {
       <div className="row mt-5">
         <div className="col-6">
           <div className="weather-temperature">
-            <div className="float-left">
-              <WeatherIcon code={data.icon} size={48} />
+            <div>
+              {" "}
+              <div className="float-left">
+                <WeatherIcon code={data.icon} size={48} />
+              </div>
             </div>
-
-            <div className="float-left">
-              <WeatherTemperature temp={data.temperature} />
+            <div>
+              <div className="float-left">
+                <WeatherTemperature temp={data.temperature} />
+              </div>
             </div>
           </div>
         </div>
