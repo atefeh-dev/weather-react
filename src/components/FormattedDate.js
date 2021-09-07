@@ -23,9 +23,9 @@ const FormattedDate = ({ date }) => {
     minutes = `0${minutes}`;
   }
   return (
-    <div>
+    <li>
       Last Updated: {day} {hours}:{minutes}
-    </div>
+    </li>
   );
 };
 export default FormattedDate;

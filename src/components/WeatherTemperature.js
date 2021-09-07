@@ -25,7 +25,7 @@ const WeatherTemperature = ({ temp }) => {
           <strong>{Math.round(temperature)}</strong>
           <span className="units ml-1">
             °C |{" "}
-            <a href="/" onClick={FahrenheitOnClickHandle}>
+            <a href="/" onClick={(e) => FahrenheitOnClickHandle(e)}>
               °F
             </a>
           </span>
@@ -36,7 +36,7 @@ const WeatherTemperature = ({ temp }) => {
         <div>
           <strong>{Math.round(temperature)}</strong>
           <span className="units ml-1">
-            <a href="/" onClick={celsiusOnClickHandle}>
+            <a href="/" onClick={(e) => celsiusOnClickHandle(e)}>
               °C
             </a>{" "}
             |°F
@@ -44,7 +44,7 @@ const WeatherTemperature = ({ temp }) => {
         </div>
       );
     default:
-      return <div>oooops fuck </div>;
+      return <div> imposible! </div>;
   }
 };
 

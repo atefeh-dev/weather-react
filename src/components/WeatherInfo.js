@@ -11,10 +11,9 @@ const WeatherInfo = ({ data }) => {
     <div className="overview">
       <h1>{data.city}</h1>
       <ul>
-        <li>
-          {" "}
+       
           <FormattedDate date={data.date} />
-        </li>
+        
         <li>{data.description}</li>
       </ul>
       <div className="row mt-5">
@@ -26,10 +25,9 @@ const WeatherInfo = ({ data }) => {
                 <WeatherIcon code={data.icon} size={48} />
               </div>
             </div>
-            <div>
-              <div className="float-left">
-                <WeatherTemperature temp={data.temperature} />
-              </div>
+            <div></div>
+            <div className="float-left">
+              <WeatherTemperature temp={data.temperature} />
             </div>
           </div>
         </div>
